@@ -30,7 +30,7 @@ const Chatbot = () => {
     switch (input.toLowerCase()) {
       case "hello":
         return "Hi there!";
-      case "how are you":
+      case "how about you":
         return "I am doing well, thank you for asking.";
       case "what is your name":
         return "My name is Chatbot.";
