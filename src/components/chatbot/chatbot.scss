@@ -1,0 +1,95 @@
+@import "../../style.scss";
+
+.container {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+
+    .message-log {
+      display: flex;
+      flex-direction: column;
+      height: 750px;
+      //width: 100vh;
+      background-color: themed("bgsoft");
+      //border-bottom: 0.5px solid themed("border");
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 20px;
+      gap: 10px;
+      overflow: scroll;
+      top: 60px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .message {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 70%;
+        word-wrap: break-word;
+      }
+
+      .user-message {
+        align-self: flex-end;
+        background-color: themed("msgbg");
+        color: themed("msgeColor");
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500px;
+        font-size: 14px;
+      }
+
+      .bot-message {
+        align-self: flex-start;
+        background-color: themed("msgbg");
+        color: themed("msgeColor");
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500px;
+        font-size: 14px;
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding: 0 10px;
+      border: 0.5px solid themed("border");
+      gap: 10px;
+      border-radius: 5px;
+      background-color: themed("bg");
+      // width: 99vh;
+
+      input {
+        flex: 1;
+        height: 20px;
+        padding: 0px 10px;
+        border: none;
+        color: themed("textColor");
+        border-radius: 5px;
+        font-size: 1rem;
+        background: transparent;
+      }
+
+      button {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        color: themed("logo");
+        background-color: themed("bgsoft");
+      }
+    }
+  }
+}
